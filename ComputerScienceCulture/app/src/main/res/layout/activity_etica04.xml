@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Etica04Activity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sesgos"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black" />
+
+            <!-- Imagen -->
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/etica4_sesgos" />
+
+            <!-- Descripción -->
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginTop="16dp"
+                android:text="La detección y mitigación de sesgos en algoritmos han avanzado con el uso de inteligencia artificial y aprendizaje automático. Estas tecnologías analizan grandes volúmenes de datos para identificar y corregir sesgos. Curiosamente, se utilizan en áreas como la contratación y la justicia penal, aunque enfrentan desafíos éticos y técnicos para garantizar la equidad y la transparencia."
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/black" />
+
+            <!-- Enlaces -->
+            <LinearLayout
+                android:id="@+id/links_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/link1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:clickable="true"
+                    android:text="Prácticas y políticas para mitigar sesgos"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/link2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sesgos en algoritmos policiales predictivos"
+                    android:textColor="@color/blue"
+                    android:clickable="true"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Botón de agregar a la biblioteca -->
+            <Button
+                android:id="@+id/add_to_library_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/links_container"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Agregar a biblioteca"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ComputerScienceCulture"
+        tools:targetApi="31">
+        <activity
+            android:name=".Culture06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Culture05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Culture04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Culture03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Culture02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Culture01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Robots06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Robots05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Robots04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Robots03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Robots02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Robots01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ninja06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ninja05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ninja03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ninja04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ninja02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ninja01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Etica06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Etica05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Etica04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Etica03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Etica02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Etica01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Creative06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Creative05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Creative04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Creative03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Creative02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Creative01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".History06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".History05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".History03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".History02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultureDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RobotsDashboardActivity"
+            android:exported="false"
+            android:label="@string/title_activity_robots_dashboard"
+            android:theme="@style/Theme.ComputerScienceCulture.NoActionBar" />
+        <activity
+            android:name=".NinjaDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EticaDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".History01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CreativeDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
