@@ -15,6 +15,11 @@ import com.google.android.material.navigation.NavigationView
 import androidx.cardview.widget.CardView
 import android.content.Context
 import android.content.SharedPreferences
+import android.widget.Button
+import interfazusuarioandroid.example.computerscienceculture.util.PreferenceHelper
+import interfazusuarioandroid.example.computerscienceculture.util.PreferenceHelper.set
+import interfazusuarioandroid.example.computerscienceculture.util.PreferenceHelper.get
+
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -31,17 +36,29 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Verificar si hay una sesión activa
+        val preferences = PreferenceHelper.defaultPrefs(this)
+        // Obtener el nombre del usuario desde el Intent
+        val username = preferences["username", intent.getStringExtra("username") ?: "User"] // Recupera el nombre guardado
+
+
+
         setContentView(R.layout.activity_home)
 
         // Configurar Toolbar
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        // Obtener el nombre del usuario desde el Intent
-        val username = intent.getStringExtra("username") ?: "User"
-
         // Mostrar el nombre del usuario en la barra superior
         supportActionBar?.title = "Holaa, $username !!"
+
+        // Para logout
+        val btnLogout = findViewById<Button>(R.id.btn_logout)
+        btnLogout.setOnClickListener{
+            clearSessionPreference()
+            goToLogin()
+        }
 
         // Configurar NavigationDrawer
         drawerLayout = findViewById(R.id.drawerLayout)
@@ -226,6 +243,17 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         } else {
             super.onBackPressed()
         }
+    }
+
+    private fun clearSessionPreference() {
+        val preferences = PreferenceHelper.defaultPrefs(this)
+        preferences["session"] = false
+    }
+
+    private fun goToLogin() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
 
